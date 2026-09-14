@@ -699,9 +699,13 @@ incidence and mortality statistics.
 
 ## Figure 5 — Pancreatic Cancer Incidence by Age
 
-<img src="/figures/incidence_by_age.png"
-     alt="Pancreatic cancer incidence by age group"
-     width="100%">
+<h2>Pancreatic Cancer Incidence by Age</h2>
+<iframe 
+    src="figures/pancreas_incidence.html" 
+    width="100%" 
+    height="600" 
+    style="border:none;">
+</iframe>
 
 **Source:** National Cancer Institute, SEER. [2]
 
