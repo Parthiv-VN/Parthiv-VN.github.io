@@ -700,7 +700,7 @@ incidence and mortality statistics.
 ## Figure 5 — Pancreatic Cancer Incidence by Age
 
 <iframe 
-    src="figures/incidence_by_age.html" 
+    src="/figures/incidence_by_age.html" 
     width="100%" 
     height="600" 
     style="border:none;">
