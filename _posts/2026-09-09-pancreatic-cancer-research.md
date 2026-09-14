@@ -648,82 +648,283 @@ investigate:
 The next sections therefore move from **population data** to the
 people affected by the disease, the biology of pancreatic cancer,
 risk factors, detection, staging, treatment, and potential solutions.
+<!-- =====================================================
+     WHO GETS PANCREATIC CANCER?
+===================================================== -->
+
 # Who Gets Pancreatic Cancer?
 
-Understanding the population affected by the disease is important
-because overall averages can hide major differences between groups.
+Pancreatic cancer does not affect every population equally.
 
-## Age
+Understanding **who is most likely to develop pancreatic cancer**
+helps identify populations that may require greater awareness,
+research attention, or future early-detection strategies.
 
-<span class="placeholder">
-Research the age distribution at diagnosis.
-</span>
+However, demographic differences should not automatically be
+interpreted as causes of cancer. A difference between populations
+can result from age distribution, risk-factor exposure, genetics,
+access to healthcare, diagnosis patterns, or combinations of these
+factors.
 
-## Sex
+This section examines pancreatic cancer by **age, sex, race and
+ethnicity, and geography**.
 
-<span class="placeholder">
-Compare incidence and mortality between males and females.
-</span>
+---
 
-## Race and Ethnicity
+# Age
 
-<span class="placeholder">
-Investigate whether incidence, mortality, stage at diagnosis,
-or survival varies among populations.
-</span>
+## Pancreatic Cancer Becomes More Common With Age
 
-## Geography
+Age is one of the strongest demographic patterns associated with
+pancreatic cancer.
 
-<span class="placeholder">
-Compare U.S. states, regions, or countries.
-</span>
+Pancreatic cancer is uncommon in younger adults and becomes much more
+common at older ages.
 
+According to the National Cancer Institute, the median age at
+diagnosis for pancreatic cancer is approximately **71 years**. [2]
 
-<div class="figure-placeholder">
+This makes age an important factor when interpreting pancreatic cancer
+incidence and mortality statistics.
 
-<div>
-<strong>FIGURE 3 — AGE DISTRIBUTION</strong>
+### Research Questions
 
-Jupyter-generated age distribution graph.
-</div>
+- At what age does pancreatic cancer incidence begin to increase
+  substantially?
+- Which age group has the highest incidence?
+- Does mortality show a similar age pattern?
+- How different is the burden between younger and older populations?
 
-</div>
+---
 
+## Figure 5 — Pancreatic Cancer Incidence by Age
 
-<div class="figure-placeholder">
+<img src="/figures/incidence_by_age.png"
+     alt="Pancreatic cancer incidence by age group"
+     width="100%">
 
-<div>
-<strong>FIGURE 4 — INCIDENCE OR MORTALITY BY POPULATION GROUP</strong>
+**Source:** National Cancer Institute, SEER. [2]
 
-Jupyter-generated demographic comparison.
-</div>
+**Analysis and visualization:** Author using Python/Jupyter Notebook.
 
-</div>
+### What Does the Age Distribution Show?
 
+The age distribution demonstrates that pancreatic cancer is primarily
+a disease of older adults.
 
-# What Is Pancreatic Cancer?
+The sharp increase in incidence with age is important because the
+United States population is also becoming older.
 
-## What does the pancreas do?
+Therefore, population aging may contribute to the future number of
+pancreatic cancer cases even if individual risk factors remain
+unchanged.
 
-<span class="placeholder">
-Explain the endocrine and exocrine functions of the pancreas.
-</span>
+This distinction is important:
 
-## Where does pancreatic cancer begin?
+> **An increasing number of cancer cases does not necessarily mean
+> that every individual's risk is increasing. Population structure
+> also matters.**
 
-<span class="placeholder">
-Explain the major pancreatic cancer cell types and identify
-which form is the focus of this project.
-</span>
+---
 
-## How does a normal cell become cancerous?
+# Sex
 
-<span class="placeholder">
-Explain mutations, abnormal signaling, uncontrolled growth,
-invasion, and metastasis.
-</span>
+## Does Pancreatic Cancer Affect Men and Women Differently?
 
+Pancreatic cancer affects both men and women.
 
+The overall incidence rate is approximately **13.9 cases per 100,000
+people per year**, but analyzing the sexes separately can reveal
+whether meaningful differences exist.
+
+### Research Questions
+
+- Is pancreatic cancer more common in men or women?
+- Is the difference consistent across age groups?
+- Does mortality show the same pattern as incidence?
+
+---
+
+## Figure 6 — Pancreatic Cancer Incidence by Sex
+
+<img src="/figures/incidence_by_sex.png"
+     alt="Pancreatic cancer incidence by sex"
+     width="100%">
+
+**Source:** National Cancer Institute, SEER. [2]
+
+**Analysis and visualization:** Author using Python/Jupyter Notebook.
+
+### Interpreting Sex Differences
+
+Differences between male and female incidence should be interpreted
+carefully.
+
+Sex may correlate with differences in exposure to known risk factors,
+occupational exposures, smoking history, metabolic conditions, and
+other biological factors.
+
+Therefore, this graph describes a population-level difference but does
+not establish that biological sex itself causes pancreatic cancer.
+
+---
+
+# Race and Ethnicity
+
+## Does Pancreatic Cancer Affect Racial and Ethnic Groups Equally?
+
+Race and ethnicity provide another important dimension of pancreatic
+cancer epidemiology.
+
+Differences in cancer rates between populations can reflect many
+factors, including:
+
+- Genetic susceptibility
+- Smoking and other behavioral exposures
+- Diabetes and metabolic health
+- Environmental exposures
+- Socioeconomic conditions
+- Access to healthcare
+- Differences in screening and diagnosis
+- Geographic distribution
+
+For this reason, racial and ethnic differences should be treated as
+an epidemiological signal requiring further investigation rather than
+as evidence of a single biological cause.
+
+---
+
+## Figure 7 — Pancreatic Cancer Incidence by Race/Ethnicity
+
+<img src="/figures/incidence_by_race.png"
+     alt="Pancreatic cancer incidence by race and ethnicity"
+     width="100%">
+
+**Source:** National Cancer Institute, SEER. [2]
+
+**Analysis and visualization:** Author using Python/Jupyter Notebook.
+
+### What Does the Comparison Show?
+
+The graph allows the project to determine whether pancreatic cancer
+incidence differs substantially among racial and ethnic populations.
+
+If meaningful differences appear, the next question is **why**.
+
+A useful follow-up analysis would compare demographic differences with
+known risk factors and healthcare-access differences rather than
+assuming that race itself explains the observed pattern.
+
+---
+
+# Geographic Distribution
+
+## Where Is Pancreatic Cancer Most Common?
+
+Geography provides another way to investigate cancer burden.
+
+Pancreatic cancer rates can vary between geographic regions because
+populations differ in age, socioeconomic conditions, environmental
+exposures, healthcare access, and prevalence of risk factors.
+
+A geographic analysis can therefore help identify areas where the
+disease burden may be concentrated.
+
+---
+
+## Figure 8 — Geographic Distribution of Pancreatic Cancer
+
+<img src="/figures/pancreatic_cancer_map.png"
+     alt="Geographic distribution of pancreatic cancer"
+     width="100%">
+
+**Source:** National Cancer Institute / SEER or CDC cancer data. [2][5]
+
+**Analysis and visualization:** Author using Python/Jupyter Notebook.
+
+### Geographic Research Questions
+
+- Which states have the highest incidence?
+- Which states have the highest mortality?
+- Are high-incidence areas also high-mortality areas?
+- Are there geographic patterns that correspond with known risk
+  factors?
+- Could healthcare access contribute to regional differences?
+
+---
+
+# Demographic Findings
+
+The demographic analysis provides several important observations.
+
+### Age
+
+Pancreatic cancer is strongly associated with older age, with the
+majority of diagnoses occurring among older adults. [2]
+
+### Sex
+
+Pancreatic cancer affects both men and women, with measurable
+differences that can be investigated using population-level data.
+
+### Race and Ethnicity
+
+Incidence differs among racial and ethnic populations, but these
+differences cannot be attributed to race alone. Multiple biological,
+environmental, behavioral, and healthcare factors may contribute.
+
+### Geography
+
+Geographic variation provides another opportunity to investigate
+whether cancer burden corresponds with differences in population
+characteristics, risk factors, or healthcare access.
+
+---
+
+# What Do These Patterns Tell Us?
+
+The demographic analysis changes the question from:
+
+> **"How common is pancreatic cancer?"**
+
+to:
+
+> **"Who is most affected, and why?"**
+
+Age appears to be particularly important because pancreatic cancer
+becomes substantially more common in older populations.
+
+However, demographic patterns alone cannot explain pancreatic cancer.
+
+The next step is therefore to investigate **risk factors**.
+
+If certain exposures or conditions are associated with higher pancreatic
+cancer risk, they may help explain some of the patterns observed in
+the population.
+
+---
+
+# From Demographics to Risk
+
+The next section investigates the known and suspected risk factors
+associated with pancreatic cancer, including:
+
+- Cigarette smoking
+- Obesity
+- Diabetes
+- Chronic pancreatitis
+- Family history
+- Inherited genetic syndromes
+- Alcohol consumption
+- Environmental and occupational exposures
+
+The goal is not simply to create a list of risk factors.
+
+Instead, the project will ask:
+
+> **Which risk factors have the strongest evidence, how large is
+> their effect, and could reducing exposure to modifiable risk
+> factors reduce the future burden of pancreatic cancer?**
 # Cancer Biology
 
 Your course introduces the **Hallmarks of Cancer** as a framework
