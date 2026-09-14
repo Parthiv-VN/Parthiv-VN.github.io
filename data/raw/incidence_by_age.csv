@@ -1,40 +1,21 @@
-"Pancreas"
-"SEER Incidence Rates by Age at Diagnosis, 2019-2023"
-"By Sex, Delay-adjusted SEER Incidence Rate, All Races / Ethnicities"
-
-"","Both Sexes","Both Sexes","Both Sexes"
-"Age at Diagnosis","Rate per 100,000","Lower 95% C.I.","Upper 95% C.I."
-"<1","^","^","^"
-"1-4","^","^","^"
-"5-9","0.04","0.02","0.06"
-"10-14","0.18","0.14","0.22"
-"15-19","0.28","0.23","0.33"
-"20-24","0.37","0.32","0.43"
-"25-29","0.57","0.51","0.64"
-"30-34","0.90","0.82","0.99"
-"35-39","1.63","1.52","1.74"
-"40-44","3.39","3.23","3.55"
-"45-49","6.44","6.21","6.68"
-"50-54","12.01","11.70","12.33"
-"55-59","21.39","20.98","21.81"
-"60-64","33.91","33.38","34.45"
-"65-69","51.40","50.69","52.12"
-"70-74","69.12","68.19","70.05"
-"75-79","89.12","87.85","90.41"
-"80-84","105.38","103.63","107.14"
-"85-89","113.38","111.01","115.77"
-"90+","108.59","105.75","111.47"
-
-"^ Estimates based on less than 16 cases are suppressed and not shown."
-
-"Data Source:"
-"-SEER Incidence Data, November 2025 Submission (1975-2023), SEER 21 registries [https://seer.cancer.gov/registries/terms.html]."
-"Methodology:"
-"-Rates are per 100,000."
-"Race/Ethnicity Coding:"
-"-For more details on SEER race/ethnicity groupings, please see Race and Hispanic Ethnicity Changes [https://seer.cancer.gov/seerstat/variables/seer/race_ethnicity/]."
-"-Rates for American Indians/Alaska Natives only include cases that are in a Purchased/Referred Care Delivery Area (PRCDA). "
-"-Incidence data for Hispanics and Non-Hispanics are based on the NAACCR Hispanic Latino Identification Algorithm (NHIA). "
-"Cancer Site Coding:"
-"-See SEER*Explorer Cancer Site Definitions [https://seer.cancer.gov/statistics-network/explorer/cancer-sites.html] for details about the cancer site coding used for SEER Incidence data."
-Created by https://seer.cancer.gov/statistics-network/explorer/ on Mon Sep 14 2026.
+Age,Rate,Lower_CI,Upper_CI
+<1,,,
+1-4,,,
+5-9,0.04,0.02,0.06
+10-14,0.18,0.14,0.22
+15-19,0.28,0.23,0.33
+20-24,0.37,0.32,0.43
+25-29,0.57,0.51,0.64
+30-34,0.90,0.82,0.99
+35-39,1.63,1.52,1.74
+40-44,3.39,3.23,3.55
+45-49,6.44,6.21,6.68
+50-54,12.01,11.70,12.33
+55-59,21.39,20.98,21.81
+60-64,33.91,33.38,34.45
+65-69,51.40,50.69,52.12
+70-74,69.12,68.19,70.05
+75-79,89.12,87.85,90.41
+80-84,105.38,103.63,107.14
+85-89,113.38,111.01,115.77
+90+,108.59,105.75,111.47
