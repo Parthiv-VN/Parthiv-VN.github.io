@@ -200,7 +200,7 @@ tags: [pancreatic cancer, cancer biology, epidemiology, early detection, treatme
 <section class="research-hero">
 
     <div class="research-kicker">
-        CANCER RESEARCH PROJECT
+        CANCER RESEARCH PROJECT - Work in Progress(WIP)
     </div>
 
     <h1>
