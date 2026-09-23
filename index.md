@@ -15,7 +15,7 @@ title: Home
   </div>
   <div class="card">
     <h3>🎯 Target Career</h3>
-    <p>I would like to become a Certified Registered Nurse Anesthetist (CRNA)</p>
+    <p>I would like to become a Intensive Care Unit Nurse (ICU Nurse)</p>
   </div>
   <div class="card">
     <h3>💻 Current Focus</h3>
