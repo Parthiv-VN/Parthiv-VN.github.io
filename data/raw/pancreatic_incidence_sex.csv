@@ -1,0 +1,37 @@
+"Pancreas"
+"Recent Trends in SEER Age-Adjusted Incidence Rates, 2000-2023"
+"By Sex, Delay-adjusted SEER Incidence Rate, All Races / Ethnicities, All Ages, All Stages"
+
+"Regression Line Segment Trends (shown on graph)"
+"Sex","Annual Percent Change (APC) Estimates","Annual Percent Change (APC) Estimates","Annual Percent Change (APC) Estimates","Annual Percent Change (APC) Estimates","Annual Percent Change (APC) Estimates","Annual Percent Change (APC) Estimates"
+"Sex","Year Range","APC (%)","Lower 95% C.I.","Upper 95% C.I.","P-Value","Direction"
+"Female","2000-2013","0.85","-0.16","1.03","0.07","Not Significant"
+"Female","2013-2023","1.29","1.05","2.35","0.01","Rising"
+"Male","2000-2013","0.86","0.13","0.98","0.04","Rising"
+"Male","2013-2023","1.11","0.97","1.89","<0.01","Rising"
+
+
+"Recent 5 and 10 Year Trends"
+"Sex","Average Annual Percent Change (AAPC) Estimates","Average Annual Percent Change (AAPC) Estimates","Average Annual Percent Change (AAPC) Estimates","Average Annual Percent Change (AAPC) Estimates","Average Annual Percent Change (AAPC) Estimates","Average Annual Percent Change (AAPC) Estimates"
+"Sex","Year Range","AAPC (%)","Lower 95% C.I.","Upper 95% C.I.","P-Value","Direction"
+"Female","2014-2023","1.29","1.05","1.50","<0.01","Rising"
+"Female","2019-2023","1.29","1.05","1.94","<0.01","Rising"
+"Male","2014-2023","1.11","0.97","1.25","<0.01","Rising"
+"Male","2019-2023","1.11","0.97","1.51","<0.01","Rising"
+
+
+"Data Source:"
+"-SEER Incidence Data, November 2025 Submission (1975-2023), SEER 21 registries [https://seer.cancer.gov/registries/terms.html]."
+"Methodology:"
+"-Rates are per 100,000 and are age-adjusted to the 2000 US Std Population (20 age groups - Census P25-1130)."
+"-The Annual Percent Change (APC) and Average Annual Percent Change (AAPC) estimates were calculated from the underlying rates using the Joinpoint Trend Analysis Software [https://surveillance.cancer.gov/joinpoint], Version 6.0, March 2026, National Cancer Institute using the default settings. The underlying rates supplied to Joinpoint were exported from SEER*Stat at the maximum available precision and included the standard error for the rate."
+"-The APC's/AAPC's direction is 'Rising' when the entire 95% confidence interval (C.I.) is above 0, 'Falling' when the entire 95% C.I. is lower than 0, otherwise, the trend is considered 'Not Significant'."
+"-The 2020 incidence rate(s) were not used in the fit of the trend line(s) and are displayed on the graph as gray data points. Impact of COVID on SEER Cancer Incidence 2020 data [https://seer.cancer.gov/data/covid-impact.html]"
+"Race/Ethnicity Coding:"
+"-For more details on SEER race/ethnicity groupings, please see Race and Hispanic Ethnicity Changes [https://seer.cancer.gov/seerstat/variables/seer/race_ethnicity/]."
+"-Rates for American Indians/Alaska Natives only include cases that are in a Purchased/Referred Care Delivery Area (PRCDA). "
+"-Incidence data for Hispanics and Non-Hispanics are based on the NAACCR Hispanic Latino Identification Algorithm (NHIA). "
+"Cancer Site Coding:"
+"-See SEER*Explorer Cancer Site Definitions [https://seer.cancer.gov/statistics-network/explorer/cancer-sites.html] for details about the cancer site coding used for SEER Incidence data."
+"-Stage at diagnosis is calculated using the Combined Summary Stage (2004+) recode, created from SEER Combined Summary Stage 2000 (2004-2017) & Derived Summary Stage 2018 (2018+). For more information, see the SEER documentation [https://seer.cancer.gov/seerstat/variables/seer/lrd-stage]."
+Created by https://seer.cancer.gov/statistics-network/explorer/ on Wed Sep 23 2026.

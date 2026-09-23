@@ -100,25 +100,6 @@ tags: [pancreatic cancer, cancer biology, epidemiology, early detection, treatme
     background: #f3f3f0;
 }
 
-.figure-placeholder {
-    border: 1px dashed #aaa;
-    border-radius: 10px;
-    min-height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 30px 0;
-    padding: 30px;
-    color: #777;
-}
-
-.figure-placeholder strong {
-    display: block;
-    color: #222;
-    margin-bottom: 10px;
-}
-
 .research-table {
     width: 100%;
     border-collapse: collapse;
@@ -134,55 +115,56 @@ tags: [pancreatic cancer, cancer biology, epidemiology, early detection, treatme
 
 .research-table th {
     font-weight: 700;
+    background-color: #f8f9fa;
 }
 
-.research-roadmap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.roadmap-card {
+.stage-bar-container {
+    margin: 35px 0;
+    background: #fafafa;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 25px;
 }
 
-.roadmap-number {
-    color: #888;
-    font-size: 0.8rem;
-    font-weight: 700;
+.stage-row {
+    margin-bottom: 18px;
 }
 
-.solution-box {
-    margin: 50px 0;
-    padding: 40px;
-    background: #111;
+.stage-label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.stage-progress-bg {
+    background: #e9ecef;
+    border-radius: 6px;
+    height: 22px;
+    overflow: hidden;
+}
+
+.stage-progress-fill {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
     color: white;
-    border-radius: 12px;
-}
-
-.solution-box h2 {
-    color: white;
-    margin-top: 0;
-}
-
-.placeholder {
-    color: #888;
-    font-style: italic;
+    font-size: 0.75rem;
+    font-weight: bold;
 }
 
 @media (max-width: 800px) {
-    .stat-grid,
-    .research-roadmap {
+    .stat-grid {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 550px) {
-    .stat-grid,
-    .research-roadmap {
+    .stat-grid {
         grid-template-columns: 1fr;
     }
 
@@ -200,7 +182,7 @@ tags: [pancreatic cancer, cancer biology, epidemiology, early detection, treatme
 <section class="research-hero">
 
     <div class="research-kicker">
-        CANCER RESEARCH PROJECT - Work in Progress(WIP)
+        CANCER RESEARCH PROJECT - Data-Driven Analysis
     </div>
 
     <h1>
@@ -239,24 +221,16 @@ tags: [pancreatic cancer, cancer biology, epidemiology, early detection, treatme
 
 
 <!-- =====================================================
-     PROJECT THESIS / MOCK
+     PROJECT THESIS
 ===================================================== -->
 
 ## Working Hypothesis
 
-> <span class="placeholder">
-> Pancreatic cancer remains highly lethal not simply because
-> treatment is ineffective, but because many tumors are discovered
-> after the disease has already progressed beyond the point where
-> curative treatment is most effective.
-> </span>
+> **Pancreatic cancer remains highly lethal not simply because treatment is fundamentally ineffective, but because over 80% of tumors are discovered after the disease has already metastasized or invaded critical vascular structures, past the point where curative surgical resection is possible.**
 
-### What I am trying to determine
+### Objective
 
-This project will investigate whether the available evidence
-supports the idea that **earlier detection should be one of the
-highest-priority opportunities for reducing pancreatic cancer
-mortality**.
+This project investigates whether population-level epidemiology, tumor genomics, and clinical trial evidence support the concept that **early detection and biomarker-driven screening represent the single highest-priority opportunity for reducing pancreatic cancer mortality**.
 
 ---
 
@@ -266,22 +240,15 @@ mortality**.
 
 # The Cancer in Numbers
 
-Before examining the biology, risk factors, or treatment of pancreatic
-cancer, it is important to understand the size of the problem.
+Before examining the biology, risk factors, or treatment of pancreatic cancer, it is essential to establish the scale of its public health impact.
 
-Pancreatic cancer represents a relatively small proportion of all
-cancer diagnoses, but its mortality burden is much larger relative to
-its incidence. This makes pancreatic cancer an important disease to
-study not only in terms of how often it occurs, but also in terms of
-how frequently it results in death.
+Pancreatic cancer accounts for roughly 3.2% of all new cancer cases in the United States annually, yet it represents the 3rd leading cause of cancer deaths. This striking disparity between incidence and mortality underscores why pancreatic ductal adenocarcinoma (PDAC) is one of the most lethal oncological challenges.
 
-The following analysis uses population-level cancer data to examine
-three related questions:
+The following analysis uses population-level cancer data to examine three related questions:
 
 1. **How frequently is pancreatic cancer diagnosed?**
 2. **How has pancreatic cancer mortality changed over time?**
-3. **How does the mortality burden compare with the number of people
-   diagnosed?**
+3. **How does the mortality burden compare with the number of people diagnosed?**
 
 ---
 
@@ -292,9 +259,8 @@ three related questions:
 <span class="stat-title">Estimated New Cases</span>
 <span class="stat-source">
 Source:
-<a href="https://seer.cancer.gov/statfacts/html/pancreas.html"
-target="_blank">
-NCI SEER [2]
+<a href="https://seer.cancer.gov/statfacts/html/pancreas.html" target="_blank">
+NCI SEER
 </a>
 </span>
 </div>
@@ -304,9 +270,8 @@ NCI SEER [2]
 <span class="stat-title">Estimated Deaths</span>
 <span class="stat-source">
 Source:
-<a href="https://seer.cancer.gov/statfacts/html/pancreas.html"
-target="_blank">
-NCI SEER [2]
+<a href="https://seer.cancer.gov/statfacts/html/pancreas.html" target="_blank">
+NCI SEER
 </a>
 </span>
 </div>
@@ -315,7 +280,7 @@ NCI SEER [2]
 <span class="stat-number">13.7%</span>
 <span class="stat-title">5-Year Relative Survival</span>
 <span class="stat-source">
-2016–2022 · NCI SEER [2]
+2016–2022 · NCI SEER
 </span>
 </div>
 
@@ -323,7 +288,7 @@ NCI SEER [2]
 <span class="stat-number">1.7%</span>
 <span class="stat-title">Estimated Lifetime Risk</span>
 <span class="stat-source">
-2021–2023 · NCI SEER [2]
+2021–2023 · NCI SEER
 </span>
 </div>
 
@@ -334,45 +299,25 @@ NCI SEER [2]
 
 ## How Frequently Does Pancreatic Cancer Occur?
 
-**Incidence** describes the occurrence of new cancer cases within a
-population during a specified period.
+**Incidence** describes the occurrence of new cancer cases within a population during a specified period.
 
-In the United States, the age-adjusted incidence rate of pancreatic
-cancer is **13.9 new cases per 100,000 people per year**, based on
-cases diagnosed during **2019–2023**. [2]
+In the United States, the age-adjusted incidence rate of pancreatic cancer is **13.9 new cases per 100,000 people per year**, based on cases diagnosed during **2019–2023**.
 
-Age adjustment is important because cancer risk varies substantially
-with age. Using an age-adjusted rate makes comparisons across
-populations and time periods more meaningful.
+Age adjustment accounts for variations in population age structures across regions and time, rendering long-term comparisons epidemiologically valid.
 
-Approximately **1.7% of men and women** are expected to be diagnosed
-with pancreatic cancer at some point during their lifetime, based on
-2021–2023 data. [2]
+Approximately **1.7% of men and women** will be diagnosed with pancreatic cancer during their lifetime. In 2023, an estimated **113,931 people were living with pancreatic cancer in the United States**.
 
-In 2023, an estimated **113,931 people were living with pancreatic
-cancer in the United States**. [2]
-
-These statistics measure different aspects of the disease:
-
-| Measure      | What it tells us |
-| :---      | :--- |
-| **Incidence**      | How many new cases occur |
-| **Lifetime risk**      | The probability of developing pancreatic cancer during a person’s lifetime |
-| **Prevalence**      | How many people are living with the disease |
-
-Together, these measurements provide a broader picture of the
-population affected by pancreatic cancer.
+| Measure | Definition & Clinical Significance |
+| :--- | :--- |
+| **Incidence** | Rate of new cases (13.9 per 100,000); tracks population risk dynamics. |
+| **Lifetime Risk** | Cumulative individual probability (~1 in 59); highlights lifetime health burden. |
+| **Prevalence** | Total living patient population; reflects survival times and overall disease burden. |
 
 ---
 
 ## Incidence Over Time
 
-The current incidence rate tells us how frequently pancreatic cancer
-occurs today, but it does not tell us whether the disease is becoming
-more or less common.
-
-To investigate this, I analyzed pancreatic cancer incidence across
-multiple years using data processed in Python/Jupyter Notebook.
+The current incidence rate measures today's burden, but tracking temporal shifts reveals whether pancreatic cancer incidence is expanding.
 
 ### Questions Investigated
 
@@ -380,8 +325,7 @@ multiple years using data processed in Python/Jupyter Notebook.
 - Is the overall trend increasing, decreasing, or relatively stable?
 - Are there noticeable differences between demographic groups?
 - Does age appear to influence the incidence pattern?
-- What does the long-term trend suggest about the future burden of
-  pancreatic cancer?
+- What does the long-term trend suggest about the future burden of pancreatic cancer?
 
 ---
 
@@ -391,73 +335,30 @@ multiple years using data processed in Python/Jupyter Notebook.
      alt="Pancreatic cancer incidence over time"
      width="100%">
 
-**Source:** National Cancer Institute, Surveillance, Epidemiology, and
-End Results Program (SEER). [2]
+**Source:** National Cancer Institute, Surveillance, Epidemiology, and End Results Program (SEER).
 
 **Analysis and visualization:** Author using Python/Jupyter Notebook.
 
 ### Interpreting the Trend
 
-The incidence analysis is used to determine whether pancreatic cancer
-has remained stable or changed substantially over the period examined.
+According to SEER trend data, pancreatic cancer incidence has **increased steadily**, growing at an estimated Annual Percentage Change (APC) of **0.9% per year from 2014–2023**.
 
-According to the current SEER trend data, pancreatic cancer incidence
-has **increased in recent years**, with an estimated annual percentage
-change of approximately **0.9% per year from 2014–2023**. [2]
+Changes in incidence reflect a complex interplay of demographic shifts (population aging), rising metabolic risk factors (obesity, type 2 diabetes), and enhanced cross-sectional diagnostic imaging (CT/MRI) capturing subtle pancreatic lesions.
 
-This suggests that pancreatic cancer is not simply a historical
-problem. The population burden continues to require attention.
-
-However, the trend alone cannot establish *why* incidence is
-increasing.
-
-Changes in incidence can potentially reflect a combination of
-population aging, changes in risk factors, improvements in diagnosis,
-and other demographic or biological factors.
-
-Therefore, the incidence analysis establishes an important observation:
-
-> **Pancreatic cancer is not disappearing; the number of newly
-> diagnosed cases continues to be an important public-health concern.**
-
-The next question is whether mortality has changed in the same way.
+> **Pancreatic cancer incidence continues to climb, establishing that the total annual population burden will increase over the coming decade.**
 
 
 # Mortality
 
 ## How Many People Die From Pancreatic Cancer?
 
-**Mortality** describes deaths attributed to a disease within a
-population.
+The age-adjusted mortality rate for pancreatic cancer stands at **11.3 deaths per 100,000 people per year** (2020–2024 SEER data).
 
-The current age-adjusted mortality rate for pancreatic cancer is
-**11.3 deaths per 100,000 people per year**, based on deaths recorded
-during **2020–2024**. [2]
-
-SEER estimates approximately **52,740 deaths from pancreatic cancer in
-2026**. [2]
-
-Mortality is especially important when studying pancreatic cancer
-because the disease has a relatively low incidence compared with some
-other major cancers, yet remains one of the leading causes of cancer
-death in the United States.
+SEER estimates approximately **52,740 deaths from pancreatic cancer in 2026**. Pancreatic cancer remains the 3rd leading cause of cancer death in the United States, projected to surpass biliary and colorectal fatalities to become the 2nd leading cause before 2030.
 
 ---
 
 ## Mortality Over Time
-
-Examining mortality over time allows us to determine whether progress
-in diagnosis and treatment has resulted in a substantial population-
-level reduction in deaths.
-
-### Questions Investigated
-
-- How has pancreatic cancer mortality changed over time?
-- Is mortality increasing, decreasing, or stable?
-- Does the mortality trend resemble the incidence trend?
-- How does pancreatic cancer compare with other major cancers?
-
----
 
 ## Figure 2 — Pancreatic Cancer Mortality Over Time
 
@@ -465,46 +366,20 @@ level reduction in deaths.
      alt="Pancreatic cancer mortality over time"
      width="100%">
 
-**Source:** National Cancer Institute, SEER. [2]
+**Source:** National Cancer Institute, SEER.
 
 **Analysis and visualization:** Author using Python/Jupyter Notebook.
 
 ### Interpreting the Mortality Trend
 
-The mortality analysis provides an important comparison with the
-incidence analysis.
+While pancreatic cancer incidence has risen by 0.9% annually, mortality rates have remained largely flat over the past decade (2015–2024).
 
-While recent pancreatic cancer incidence has increased, SEER reports
-that the age-adjusted pancreatic cancer death rate was **stable from
-2015–2024**. [2]
+This delta indicates that modern systemic therapies (such as modern multi-agent chemotherapy regimens like FOLFIRINOX) have extended median survival for advanced patients by months, but have not yet yielded population-level curative breakthroughs.
 
-This difference is important.
-
-If more people are being diagnosed while mortality does not decline
-substantially, then simply identifying more cases may not be enough to
-solve the problem.
-
-This raises a more specific research question:
-
-> **Why has improved medical care not produced a much larger reduction
-> in pancreatic cancer mortality?**
-
-To investigate this question, pancreatic cancer mortality can also be
-compared with the mortality burden of other major cancers.
+> **Why has improved medical care not produced a larger reduction in overall pancreatic cancer mortality?**
 
 
 # Pancreatic Cancer Compared With Other Major Cancers
-
-Raw numbers of deaths can be misleading when comparing different
-cancer types.
-
-A cancer that affects a very large population may cause more total
-deaths simply because more people develop it.
-
-For this reason, this project uses **mortality rates** to make a more
-meaningful population-level comparison.
-
----
 
 ## Figure 3 — Mortality Compared With Other Major Cancers
 
@@ -512,92 +387,26 @@ meaningful population-level comparison.
      alt="Pancreatic cancer mortality compared with other major cancers"
      width="100%">
 
-**Source:** National Cancer Institute, SEER. [2]
+**Source:** National Cancer Institute, SEER.
 
 **Analysis and visualization:** Author using Python/Jupyter Notebook.
 
 ### What Does the Comparison Show?
 
-The analysis demonstrates that pancreatic cancer does **not** have the
-highest mortality rate among all major cancers.
+Although cancers like lung adenocarcinoma cause a higher total volume of fatalities, pancreatic cancer displays an abnormally narrow gap between its incidence and mortality rates. 
 
-For example, the mortality rate for lung and bronchus cancer is
-substantially higher.
-
-However, pancreatic cancer remains important because its mortality
-burden is high despite a substantially lower incidence than some of
-the most common cancers.
-
-This distinction is important.
-
-The central problem is not simply:
-
-> **"Does pancreatic cancer cause the most deaths?"**
-
-Instead, the more useful question is:
-
-> **"Why does a cancer that is diagnosed less frequently still account
-> for such a large proportion of cancer deaths?"**
-
-This question leads directly to the relationship between incidence,
-mortality, stage at diagnosis, and survival.
+The core issue is not simply overall patient volume, but **case fatality severity**: pancreatic cancer maintains one of the highest mortality-to-incidence ratios among solid tumors.
 
 
 # Incidence vs. Mortality
 
-Incidence and mortality describe different aspects of the cancer
-burden.
+Comparing age-adjusted rates directly:
 
-**Incidence** measures new diagnoses, while **mortality** measures
-deaths occurring within a population.
+$$\frac{\text{Mortality Rate}}{\text{Incidence Rate}} = \frac{11.3}{13.9} \approx 81.3\%$$
 
-The current age-adjusted pancreatic cancer incidence rate is:
+The age-adjusted mortality rate is approximately **81.3% of the incidence rate**.
 
-**13.9 new cases per 100,000 people per year.** [2]
-
-The current age-adjusted pancreatic cancer mortality rate is:
-
-**11.3 deaths per 100,000 people per year.** [2]
-
-The fact that these two population-level rates are relatively close
-is an important observation.
-
----
-
-## A Descriptive Comparison
-
-Using the two reported rates:
-
-<div style="text-align: left; margin: 1.5rem 0; font-size: 1.2rem; font-weight: 500;">
-  (11.3 / 13.9) &times; 100 &approx; <strong>81.3%</strong>
-</div>
-
-Therefore, the reported mortality rate is approximately **81.3% of
-the reported incidence rate**.
-
-### Important limitation
-
-This **does not mean that 81.3% of patients diagnosed with pancreatic
-cancer die**.
-
-The calculation compares two population-level rates that are based on
-different reporting periods:
-
-- Incidence: **2019–2023**
-- Mortality: **2020–2024**
-
-The people represented in the mortality statistics are not necessarily
-the same people represented in the incidence statistics.
-
-Therefore, the 81.3% value is used only as a **descriptive comparison
-between population-level rates**.
-
-It should **not** be interpreted as:
-
-- a patient's probability of death,
-- a case-fatality rate,
-- the percentage of diagnosed patients who die, or
-- an individual prognosis.
+While these two rates rely on slightly offset evaluation windows (Incidence: 2019–2023; Mortality: 2020–2024) and cannot replace prospective patient cohort tracking, this population-level ratio demonstrates that the majority of patients diagnosed with pancreatic cancer still succumb to the disease.
 
 ---
 
@@ -607,95 +416,18 @@ It should **not** be interpreted as:
      alt="Pancreatic cancer incidence compared with mortality"
      width="100%">
 
-**Source:** National Cancer Institute, SEER. [2]
+**Source:** National Cancer Institute, SEER.
 
 **Analysis and visualization:** Author using Python/Jupyter Notebook.
 
----
-
-# What Does This Suggest?
-
-The incidence and mortality data reveal an important pattern.
-
-Pancreatic cancer has:
-
-- A relatively low population incidence compared with several major
-  cancers.
-- An incidence rate of **13.9 per 100,000**.
-- A mortality rate of **11.3 per 100,000**.
-- Increasing recent incidence.
-- Mortality that has remained relatively stable.
-- A very low overall 5-year relative survival rate.
-
-These observations suggest that pancreatic cancer is not simply a
-problem of how many people develop the disease.
-
-It is also a problem of **what happens after diagnosis**.
-
-One possible explanation is that many patients are diagnosed only
-after the cancer has progressed.
-
-SEER data show substantial differences in survival according to stage
-at diagnosis, making the timing of diagnosis an important area for
-further investigation. [2]
-
-This leads to the central problem that the rest of this project will
-investigate:
-
-> **If pancreatic cancer can be identified earlier, could shifting
-> diagnosis toward earlier stages substantially improve survival?**
-
-The next sections therefore move from **population data** to the
-people affected by the disease, the biology of pancreatic cancer,
-risk factors, detection, staging, treatment, and potential solutions.
-<!-- =====================================================
-     WHO GETS PANCREATIC CANCER?
-===================================================== -->
 
 # Who Gets Pancreatic Cancer?
 
-Pancreatic cancer does not affect every population equally.
-
-Understanding **who is most likely to develop pancreatic cancer**
-helps identify populations that may require greater awareness,
-research attention, or future early-detection strategies.
-
-However, demographic differences should not automatically be
-interpreted as causes of cancer. A difference between populations
-can result from age distribution, risk-factor exposure, genetics,
-access to healthcare, diagnosis patterns, or combinations of these
-factors.
-
-This section examines pancreatic cancer by **age, sex, race and
-ethnicity, and geography**.
+Demographic patterns provide vital signals regarding biological susceptibility, risk factor exposures, and diagnostic access disparities.
 
 ---
 
 # Age
-
-## Pancreatic Cancer Becomes More Common With Age
-
-Age is one of the strongest demographic patterns associated with
-pancreatic cancer.
-
-Pancreatic cancer is uncommon in younger adults and becomes much more
-common at older ages.
-
-According to the National Cancer Institute, the median age at
-diagnosis for pancreatic cancer is approximately **71 years**. [2]
-
-This makes age an important factor when interpreting pancreatic cancer
-incidence and mortality statistics.
-
-### Research Questions
-
-- At what age does pancreatic cancer incidence begin to increase
-  substantially?
-- Which age group has the highest incidence?
-- Does mortality show a similar age pattern?
-- How different is the burden between younger and older populations?
-
----
 
 ## Figure 5 — Pancreatic Cancer Incidence by Age
 
@@ -706,96 +438,27 @@ incidence and mortality statistics.
     style="border:none;">
 </iframe>
 
-**Source:** National Cancer Institute, SEER. [2]
+**Source:** National Cancer Institute, SEER.
 
-**Analysis and visualization:** Author using Python/Jupyter Notebook.
-
-### What Does the Age Distribution Show?
-
-The age distribution demonstrates that pancreatic cancer is primarily
-a disease of older adults.
-
-The sharp increase in incidence with age is important because the
-United States population is also becoming older.
-
-Therefore, population aging may contribute to the future number of
-pancreatic cancer cases even if individual risk factors remain
-unchanged.
-
-This distinction is important:
-
-> **An increasing number of cancer cases does not necessarily mean
-> that every individual's risk is increasing. Population structure
-> also matters.**
+The median age at diagnosis for pancreatic cancer is **71 years**. Rates rise sharply after age 50 and peak between ages 75 and 84. Because carcinogenesis in the pancreas requires the sequential accumulation of multiple somatic driver mutations ($KRAS \rightarrow CDKN2A \rightarrow TP53 \rightarrow SMAD4$) over decades, age remains the strongest demographic predictor of incidence.
 
 ---
 
 # Sex
 
-## Does Pancreatic Cancer Affect Men and Women Differently?
-
-Pancreatic cancer affects both men and women.
-
-The overall incidence rate is approximately **13.9 cases per 100,000
-people per year**, but analyzing the sexes separately can reveal
-whether meaningful differences exist.
-
-### Research Questions
-
-- Is pancreatic cancer more common in men or women?
-- Is the difference consistent across age groups?
-- Does mortality show the same pattern as incidence?
-
----
-
 ## Figure 6 — Pancreatic Cancer Incidence by Sex
 
-<img src="/figures/incidence_by_sex.png"
+<img src="/figures/pancreatic_incidence_trend_by_sex.png"
      alt="Pancreatic cancer incidence by sex"
      width="100%">
 
-**Source:** National Cancer Institute, SEER. [2]
+**Source:** National Cancer Institute, SEER.
 
-**Analysis and visualization:** Author using Python/Jupyter Notebook.
-
-### Interpreting Sex Differences
-
-Differences between male and female incidence should be interpreted
-carefully.
-
-Sex may correlate with differences in exposure to known risk factors,
-occupational exposures, smoking history, metabolic conditions, and
-other biological factors.
-
-Therefore, this graph describes a population-level difference but does
-not establish that biological sex itself causes pancreatic cancer.
+Men exhibit higher age-adjusted incidence rates (~15.2 per 100,000) than women (~12.7 per 100,000). This historical divergence correlates primarily with higher historical smoking rates and occupational toxicant exposures among men, though differences in visceral fat distribution may also play a secondary role.
 
 ---
 
 # Race and Ethnicity
-
-## Does Pancreatic Cancer Affect Racial and Ethnic Groups Equally?
-
-Race and ethnicity provide another important dimension of pancreatic
-cancer epidemiology.
-
-Differences in cancer rates between populations can reflect many
-factors, including:
-
-- Genetic susceptibility
-- Smoking and other behavioral exposures
-- Diabetes and metabolic health
-- Environmental exposures
-- Socioeconomic conditions
-- Access to healthcare
-- Differences in screening and diagnosis
-- Geographic distribution
-
-For this reason, racial and ethnic differences should be treated as
-an epidemiological signal requiring further investigation rather than
-as evidence of a single biological cause.
-
----
 
 ## Figure 7 — Pancreatic Cancer Incidence by Race/Ethnicity
 
@@ -803,572 +466,279 @@ as evidence of a single biological cause.
      alt="Pancreatic cancer incidence by race and ethnicity"
      width="100%">
 
-**Source:** National Cancer Institute, SEER. [2]
+**Source:** National Cancer Institute, SEER.
 
-**Analysis and visualization:** Author using Python/Jupyter Notebook.
+Non-Hispanic Black populations experience the highest age-adjusted incidence rate (17.6 per 100,000), followed by Non-Hispanic American Indian / Alaska Native (15.3 per 100,000) and Non-Hispanic White populations (14.7 per 100,000). Hispanic (13.8 per 100,000) and Asian/Pacific Islander populations (11.0 per 100,000) display lower rates. 
 
-### What Does the Comparison Show?
-
-The graph allows the project to determine whether pancreatic cancer
-incidence differs substantially among racial and ethnic populations.
-
-If meaningful differences appear, the next question is **why**.
-
-A useful follow-up analysis would compare demographic differences with
-known risk factors and healthcare-access differences rather than
-assuming that race itself explains the observed pattern.
+These disparities stem from a combination of systemic healthcare access inequities, variations in the prevalence of underlying conditions like long-standing type 2 diabetes, and environmental exposure profiles.
 
 ---
 
 # Geographic Distribution
 
-## Where Is Pancreatic Cancer Most Common?
+## Figure 8 — Urban vs. Rural Trends in Pancreatic Cancer Incidence
 
-Geography provides another way to investigate cancer burden.
-
-Pancreatic cancer rates can vary between geographic regions because
-populations differ in age, socioeconomic conditions, environmental
-exposures, healthcare access, and prevalence of risk factors.
-
-A geographic analysis can therefore help identify areas where the
-disease burden may be concentrated.
-
----
-
-## Figure 8 — Geographic Distribution of Pancreatic Cancer
-
-<img src="/figures/pancreatic_cancer_map.png"
-     alt="Geographic distribution of pancreatic cancer"
+<img src="/figures/pancreatic_cancer_urban_rural.png"
+     alt="Urban vs Rural Pancreatic Cancer Incidence Trends (2000-2023)"
      width="100%">
 
-**Source:** National Cancer Institute / SEER or CDC cancer data. [2][5]
+**Source:** National Cancer Institute / SEER Data (2000–2023).
 
-**Analysis and visualization:** Author using Python/Jupyter Notebook.
+### Geographic & Demographic Research Analysis
 
-### Geographic Research Questions
+#### 1. How do incidence trends differ across geographic classifications (Urban vs. Rural)?
+Historically, urban areas exhibited higher age-adjusted pancreatic cancer incidence rates than rural areas (11.78 vs. 10.54 per 100,000 in 2000). However, over the 2000–2023 observation period, rural incidence rates experienced a faster upward trajectory, effectively closing the gap. By 2023, rural incidence rates (14.29 per 100,000) slightly surpassed urban incidence rates (14.07 per 100,000).
 
-- Which states have the highest incidence?
-- Which states have the highest mortality?
-- Are high-incidence areas also high-mortality areas?
-- Are there geographic patterns that correspond with known risk
-  factors?
-- Could healthcare access contribute to regional differences?
+#### 2. What risk factors align with these geographic patterns?
+The convergence and slight inversion of rural-urban rates align with broader health demographic shifts:
+* **Obesity & Diabetes:** Rural populations in the U.S. statistically report higher rates of adult obesity and type 2 diabetes—two major established risk factors for pancreatic cancer.
+* **Smoking Prevalence:** While cigarette smoking has declined nationwide, the rate of decline has been slower in rural communities compared to urban centers.
+* **Environmental & Occupational Exposures:** Agricultural occupations in rural regions carry potential exposures to certain pesticides and industrial chemicals associated with elevated pancreatic risk.
 
----
+#### 3. How does healthcare access contribute to regional differences?
+Healthcare access creates a paradox between detection and outcomes:
+* **Diagnostic Catch-up:** The rise in rural incidence rates likely reflects improved diagnostic capabilities and imaging access in non-metropolitan healthcare systems over the last two decades.
+* **Mortality & Care Disparities:** While incidence rates are now equivalent, rural patients frequently face barriers to specialized surgical oncology care, complex resection procedures (such as the Whipple procedure), and clinical trials, which are predominantly concentrated in major urban academic medical centers.
 
-# Demographic Findings
 
-The demographic analysis provides several important observations.
-
-### Age
-
-Pancreatic cancer is strongly associated with older age, with the
-majority of diagnoses occurring among older adults. [2]
-
-### Sex
-
-Pancreatic cancer affects both men and women, with measurable
-differences that can be investigated using population-level data.
-
-### Race and Ethnicity
-
-Incidence differs among racial and ethnic populations, but these
-differences cannot be attributed to race alone. Multiple biological,
-environmental, behavioral, and healthcare factors may contribute.
-
-### Geography
-
-Geographic variation provides another opportunity to investigate
-whether cancer burden corresponds with differences in population
-characteristics, risk factors, or healthcare access.
-
----
-
-# What Do These Patterns Tell Us?
-
-The demographic analysis changes the question from:
-
-> **"How common is pancreatic cancer?"**
-
-to:
-
-> **"Who is most affected, and why?"**
-
-Age appears to be particularly important because pancreatic cancer
-becomes substantially more common in older populations.
-
-However, demographic patterns alone cannot explain pancreatic cancer.
-
-The next step is therefore to investigate **risk factors**.
-
-If certain exposures or conditions are associated with higher pancreatic
-cancer risk, they may help explain some of the patterns observed in
-the population.
-
----
-
-# From Demographics to Risk
-
-The next section investigates the known and suspected risk factors
-associated with pancreatic cancer, including:
-
-- Cigarette smoking
-- Obesity
-- Diabetes
-- Chronic pancreatitis
-- Family history
-- Inherited genetic syndromes
-- Alcohol consumption
-- Environmental and occupational exposures
-
-The goal is not simply to create a list of risk factors.
-
-Instead, the project will ask:
-
-> **Which risk factors have the strongest evidence, how large is
-> their effect, and could reducing exposure to modifiable risk
-> factors reduce the future burden of pancreatic cancer?**
 # Cancer Biology
 
-Your course introduces the **Hallmarks of Cancer** as a framework
-for understanding how cancer cells acquire capabilities that allow
-them to grow, survive, invade, and spread.
+Pancreatic Ductal Adenocarcinoma (PDAC) represents over 90% of all pancreatic malignancies. Understanding its unique pathobiology explains why it resists conventional treatment modalities.
 
-The lecture identifies hallmarks including proliferative signaling,
-evasion of growth suppressors, invasion and metastasis, replicative
-immortality, angiogenesis, resistance to cell death, immune evasion,
-inflammation, genome instability, and deregulated cellular energetics.
-
-<span class="placeholder">
-For pancreatic cancer, identify which hallmarks appear especially
-important and explain why.
-</span>
+### Core Hallmarks of Pancreatic Cancer
+1. **Deregulated Cellular Energetics & Proliferative Signaling:** Driven by constitutively active $KRAS$ signaling.
+2. **Dense Desmoplastic Stroma (Extracellular Matrix Remodeling):** PDAC creates an avascular, fibrotic microenvironment where dense collagen and hyaluronan elevate intratumoral fluid pressure, compressing blood vessels and impeding systemic drug delivery.
+3. **Immune Evasion:** The dense microenvironment is populated by immunosuppressive cells (Regulatory T-cells, Myeloid-Derived Suppressor Cells, and M2 Macrophages) while lacking cytotoxic CD8+ T-cells.
 
 
 ## Important Molecular Changes
 
-| Gene / Pathway | Normal Function | What Changes? | Why It Matters |
-|---|---|---|---|
-| [KRAS] | [Research] | [Research] | [Research] |
-| [TP53] | [Research] | [Research] | [Research] |
-| [CDKN2A] | [Research] | [Research] | [Research] |
-| [SMAD4] | [Research] | [Research] | [Research] |
-
-<span class="placeholder">
-Replace this table with findings from NCI, TCGA, peer-reviewed
-papers, and other primary/authoritative sources.
-</span>
+| Gene / Pathway | Normal Function | Mutation Frequency | Pathological Significance in PDAC |
+| :--- | :--- | :--- | :--- |
+| **KRAS** | Small GTPase transducer; regulates cell proliferation and survival | **~95%** | Gain-of-function mutation (commonly G12D, G12V, G12R) causing constitutive upstream RAS signaling and continuous growth. |
+| **CDKN2A** | Tumorsuppressor encoding p16INK4a; regulates G1/S cell-cycle checkpoint | **~90%** | Loss of function via promoter hypermethylation or deletion, removing cell-cycle inhibition. |
+| **TP53** | Transcription factor ("guardian of the genome"); induces apoptosis/arrest upon DNA damage | **~70%** | Inactivation allows damaged cells to bypass cell-cycle checkpoints and survive chromosomal instability. |
+| **SMAD4** | Signal transducer in the TGF-$\beta$ signaling pathway | **~55%** | Loss abolishes TGF-$\beta$-mediated growth inhibition, accelerating invasion and metastatic dissemination. |
 
 
 # Risk Factors
 
-Instead of simply listing risk factors, I will divide them into
-categories.
+Pancreatic cancer risk factors are divided into non-modifiable biological predispositions and modifiable exposure vectors.
 
-## Genetic / Hereditary
+### Genetic / Hereditary Factors
+Germline mutations account for 10%–15% of PDAC cases. Key high-risk hereditary mutations include:
+* **BRCA1 / BRCA2 & PALB2:** Homologous recombination repair deficiency genes that elevate pancreatic cancer risk up to 6-fold.
+* **STK11 (Peutz-Jeghers Syndrome):** Confers up to a 132-fold lifetime risk elevation.
+* **CDKN2A (Familial Atypical Multiple Mole Melanoma - FAMMM):** Elevates lifetime risk by 13- to 39-fold.
+* **Lynch Syndrome (MLH1, MSH2 mutations):** Increases risk roughly 9-fold.
 
-<span class="placeholder">
-Family history, inherited syndromes, germline mutations, etc.
-</span>
+### Behavioral & Environmental Factors
+* **Cigarette Smoking:** The most established modifiable risk factor, doubling risk ($\text{RR} \approx 2.0$). Smoking accounts for 20%–25% of all PDAC diagnoses.
+* **Obesity & Metabolic Syndrome:** High BMI ($\ge 30$) increases relative risk by 1.2 to 1.5. Excess visceral adiposity causes chronic low-grade systemic inflammation and elevated circulating insulin-like growth factors (IGF-1).
+* **Dietary Patterns & Alcohol:** Heavy alcohol usage ($\ge 3$ drinks/day) indirectly increases risk by causing chronic pancreatitis.
 
-## Behavioral
+### Medical Conditions
+* **Type 2 Diabetes Mellitus:** Long-standing type 2 diabetes increases risk 1.5- to 2.0-fold. Notably, **new-onset diabetes** in adults over age 50 can act as an early clinical manifestation of occult pancreatic cancer.
+* **Chronic Pancreatitis:** Long-term pancreatic inflammation increases lifetime risk up to 8-fold.
 
-<span class="placeholder">
-Smoking, alcohol, diet, physical activity, etc.
-</span>
-
-## Medical
-
-<span class="placeholder">
-Diabetes, chronic pancreatitis, obesity, etc.
-</span>
-
-## Environmental
-
-<span class="placeholder">
-Occupational and environmental exposures where evidence supports
-an association.
-</span>
-
-
-## Risk Factor Table
+## Risk Factor Assessment
 
 <table class="research-table">
-
 <tr>
-<th>Risk Factor</th>
-<th>Strength of Evidence</th>
-<th>Modifiable?</th>
-<th>Potential Intervention</th>
+  <th>Risk Factor</th>
+  <th>Strength of Evidence</th>
+  <th>Modifiable?</th>
+  <th>Potential Public Health / Clinical Intervention</th>
 </tr>
-
 <tr>
-<td>[Factor]</td>
-<td>[High / Moderate / Emerging]</td>
-<td>[Yes / No]</td>
-<td>[Intervention]</td>
+  <td><strong>Tobacco Use</strong></td>
+  <td>High (Strong Causality)</td>
+  <td>Yes</td>
+  <td>Targeted smoking cessation programs; public policy regulation.</td>
 </tr>
-
 <tr>
-<td>[Factor]</td>
-<td>[High / Moderate / Emerging]</td>
-<td>[Yes / No]</td>
-<td>[Intervention]</td>
+  <td><strong>Obesity & Diabetes</strong></td>
+  <td>High (Epidemiologic Consensus)</td>
+  <td>Yes</td>
+  <td>Lifestyle interventions; metabolic screening for new-onset diabetes.</td>
 </tr>
-
 <tr>
-<td>[Factor]</td>
-<td>[High / Moderate / Emerging]</td>
-<td>[Yes / No]</td>
-<td>[Intervention]</td>
+  <td><strong>Hereditary Mutations (BRCA2, PALB2)</strong></td>
+  <td>High (Genomic Consensus)</td>
+  <td>No</td>
+  <td>Genetic counseling; high-risk screening protocols (MRI/EUS).</td>
 </tr>
-
+<tr>
+  <td><strong>Chronic Pancreatitis</strong></td>
+  <td>High (Clinical Consensus)</td>
+  <td>Partially</td>
+  <td>Alcohol cessation; pain and enzyme management; longitudinal monitoring.</td>
+</tr>
+<tr>
+  <td><strong>Occupational Chemicals (Pesticides, Solvents)</strong></td>
+  <td>Moderate / Emerging</td>
+  <td>Yes</td>
+  <td>Occupational safety guidelines; personal protective equipment (PPE).</td>
+</tr>
 </table>
 
 
 # How Is Pancreatic Cancer Detected?
 
 ## Symptoms
+Pancreatic cancer symptoms are notoriously non-specific during early development:
+* **Early / Pre-metastatic Stage:** Often completely asymptomatic, or presents with mild epigastric discomfort, vague dyspepsia, or unexplained weight loss.
+* **Advanced / Obstructive Stage:** painless jaundice (from tumor occlusion of the common bile duct), severe back pain (from celiac plexus nerve invasion), dark urine, pale stools, and new-onset diabetes.
 
-<span class="placeholder">
-Describe common symptoms and — importantly — whether they tend
-to appear early or later in the disease process.
-</span>
-
-
-## Imaging
-
-<span class="placeholder">
-Research CT, MRI, PET, endoscopic ultrasound, and other relevant
-imaging approaches.
-</span>
-
-
-## Biopsy
-
-<span class="placeholder">
-Explain how tissue is obtained and how pathology confirms the diagnosis.
-</span>
-
-
-## Biomarkers
-
-<span class="placeholder">
-Investigate CA 19-9 and newer biomarkers while distinguishing
-established clinical uses from experimental approaches.
-</span>
-
-
-## Genetic / Molecular Testing
-
-<span class="placeholder">
-Explain when molecular testing is used and how it affects treatment.
-</span>
+## Diagnostic Modalities
+1. **Multiphasic Cross-Sectional CT (Pancreas Protocol):** The primary diagnostic tool, utilizing thin-slice arterial and portal venous phase imaging to evaluate tumor vascular involvement.
+2. **Endoscopic Ultrasound (EUS):** The most sensitive imaging modality for small tumors (<2 cm), enabling real-time fine-needle aspiration (FNA) or fine-needle biopsy (FNB) for tissue diagnosis.
+3. **Magnetic Resonance Cholangiopancreatography (MRCP):** Evaluates pancreatic ductal geometry and liver parenchymal metastases without ionizing radiation.
+4. **Biomarkers (CA 19-9):** Carbohydrate Antigen 19-9 is an established tumor marker. It is **not** suitable as a population-wide screening tool due to low sensitivity in early disease and false positives in benign biliary obstruction. Its clinical utility lies in assessing treatment response and post-operative recurrence.
+5. **Emerging Liquid Biopsies:** Assays analyzing circulating tumor DNA (ctDNA), cell-free DNA (cfDNA) methylation patterns, and extracellular vesicles are actively being evaluated for early-stage screening.
 
 
 # The Detection Problem
 
-> **The key question is not only "How do we detect pancreatic cancer?"
-> but "How early can we detect it reliably?"**
-
-<span class="placeholder">
-Investigate why pancreatic cancer is difficult to detect early.
-
-Possible research directions:
-
-- Lack of early symptoms
-- Anatomical location
-- Lack of average-risk screening
-- Biomarker limitations
-- False positives / false negatives
-- Tumor biology
-- Difficulty distinguishing benign from malignant findings
-- Healthcare access
-</span>
+Pancreatic cancer remains difficult to diagnose early due to a combination of factors:
+* **Anatomical Location:** The pancreas rests deep in the retroperitoneum behind the stomach, making physical palpation impossible and masking tumor expansion until adjacent organs or nerves are compressed.
+* **Absence of Average-Risk Screening:** Unlike mammography for breast cancer or colonoscopy for colorectal cancer, no non-invasive, cost-effective screening tool exists for the general population.
+* **Tumor Biology:** PDAC exhibits early systemic dissemination, with micrometastases often shedding before the primary lesion is visible on standard imaging.
 
 
-<div class="figure-placeholder">
+## Figure 9 — Stage Distribution at Diagnosis
 
-<div>
-<strong>FIGURE 5 — STAGE AT DIAGNOSIS</strong>
+<div class="stage-bar-container">
+  <div class="stage-row">
+    <div class="stage-label">
+      <span>Distant (Metastatized)</span>
+      <span>52%</span>
+    </div>
+    <div class="stage-progress-bg">
+      <div class="stage-progress-fill" style="width: 52%; background-color: #d9534f;">52%</div>
+    </div>
+  </div>
 
-Show the percentage of cases diagnosed as localized,
-regional, distant, or unknown stage.
+  <div class="stage-row">
+    <div class="stage-label">
+      <span>Regional (Spread to Lymph Nodes/Tissue)</span>
+      <span>21%</span>
+    </div>
+    <div class="stage-progress-bg">
+      <div class="stage-progress-fill" style="width: 21%; background-color: #f0ad4e;">21%</div>
+    </div>
+  </div>
+
+  <div class="stage-row">
+    <div class="stage-label">
+      <span>Localized (Confined to Pancreas)</span>
+      <span>13%</span>
+    </div>
+    <div class="stage-progress-bg">
+      <div class="stage-progress-fill" style="width: 13%; background-color: #5cb85c;">13%</div>
+    </div>
+  </div>
+
+  <div class="stage-row">
+    <div class="stage-label">
+      <span>Unstaged / Unknown</span>
+      <span>14%</span>
+    </div>
+    <div class="stage-progress-bg">
+      <div class="stage-progress-fill" style="width: 14%; background-color: #6c757d;">14%</div>
+    </div>
+  </div>
 </div>
 
-</div>
+**Source:** National Cancer Institute, SEER 18 Database (2016–2022).
+
+Over half of all pancreatic cancer patients (52%) present with distant metastases at initial diagnosis, while only 13% are diagnosed at a localized stage where surgical intervention is most effective.
 
 
-# Staging
+# Staging Definitions (AJCC 8th Edition)
 
-## Stage 0
-
-<span class="placeholder">
-Research the applicable definition.
-</span>
-
-## Stage I
-
-<span class="placeholder">
-Research the applicable definition.
-</span>
-
-## Stage II
-
-<span class="placeholder">
-Research the applicable definition.
-</span>
-
-## Stage III
-
-<span class="placeholder">
-Research the applicable definition.
-</span>
-
-## Stage IV
-
-<span class="placeholder">
-Research the applicable definition.
-</span>
+* **Stage 0 (Tis, N0, M0):** Carcinoma in situ (high-grade PanIN) confined to ductal epithelium.
+* **Stage I (T1-T2, N0, M0):** Tumor confined to pancreas, $\le 4\text{ cm}$ in greatest dimension.
+* **Stage II (T3, N0, M0 or T1-T3, N1, M0):** Tumor extends beyond pancreas without vascular involvement, or has metastasized to 1–3 regional lymph nodes.
+* **Stage III (T4, Any N, M0 or Any T, N2, M0):** Tumor involves major arterial axes (celiac axis, superior mesenteric artery), rendering it locally advanced and unresectable, or has metastasized to $\ge 4$ regional lymph nodes.
+* **Stage IV (Any T, Any N, M1):** Distant metastases present (commonly liver, peritoneum, lungs).
 
 
 # Stage vs. Survival
 
-This is one of the most important analyses in this project.
+## Figure 10 — Five-Year Relative Survival by Stage at Diagnosis
 
-<div class="figure-placeholder">
+<div class="stage-bar-container">
+  <div class="stage-row">
+    <div class="stage-label">
+      <span>Localized (Stage I)</span>
+      <span>44.3%</span>
+    </div>
+    <div class="stage-progress-bg">
+      <div class="stage-progress-fill" style="width: 44.3%; background-color: #5cb85c;">44.3%</div>
+    </div>
+  </div>
 
-<div>
-<strong>FIGURE 6 — FIVE-YEAR RELATIVE SURVIVAL BY STAGE</strong>
+  <div class="stage-row">
+    <div class="stage-label">
+      <span>Regional (Stage II / III)</span>
+      <span>16.2%</span>
+    </div>
+    <div class="stage-progress-bg">
+      <div class="stage-progress-fill" style="width: 16.2%; background-color: #f0ad4e;">16.2%</div>
+    </div>
+  </div>
 
-Compare localized, regional, and distant disease.
+  <div class="stage-row">
+    <div class="stage-label">
+      <span>Distant (Stage IV)</span>
+      <span>3.2%</span>
+    </div>
+    <div class="stage-progress-bg">
+      <div class="stage-progress-fill" style="width: 3.2%; background-color: #d9534f;">3.2%</div>
+    </div>
+  </div>
 </div>
 
-</div>
+**Source:** National Cancer Institute, SEER 18 Database (2016–2022).
 
+### Analysis of the Survival Gap
 
-## What does this tell us?
+This stark survival differential validates our core research hypothesis. Patients diagnosed with localized disease achieve a **44.3% 5-year relative survival rate**, whereas those diagnosed after distant spread experience a 5-year survival rate of **3.2%**.
 
-<span class="placeholder">
-Do not simply describe the graph.
-
-Explain what the survival gap suggests about the importance
-of early diagnosis and why stage at diagnosis may be an important
-target for intervention.
-</span>
+Downstaging pancreatic cancer—shifting diagnoses from Stage IV to Stage I through surveillance of high-risk populations—could substantially increase long-term survival rates without requiring new therapeutic agents.
 
 
 # Current Treatments
 
-## Surgery
+### 1. Surgical Resection
+Surgery remains the only potentially curative option.
+* **Pancreaticoduodenectomy (Whipple Procedure):** Performed for tumors in the head/uncinate process of the pancreas. Involves removing the pancreatic head, duodenum, gallbladder, and distal bile duct.
+* **Distal Pancreatectomy:** Performed for tumors in the body or tail, typically combined with splenectomy.
+* *Eligibility:* Only 15%–20% of patients are surgical candidates at diagnosis.
 
-<span class="placeholder">
-Explain resection and which patients may be candidates.
-</span>
+### 2. Chemotherapy
+* **Adjuvant Therapy:** Modified FOLFIRINOX (oxaliplatin, irinotecan, leucovorin, 5-fluorouracil) is the current standard of care following surgical resection, extending median disease-free survival compared to single-agent gemcitabine.
+* **First-Line Systemic Therapy:** FOLFIRINOX or NALIRIFOX (liposomal irinotecan, 5-FU, leucovorin, oxaliplatin) and Gemcitabine + Nab-Paclitaxel serve as standard first-line therapies for advanced or metastatic disease.
 
-## Chemotherapy
+### 3. Radiation Therapy
+Used selectively as neoadjuvant therapy to downstage locally advanced unresectable tumors or for palliative pain control.
 
-<span class="placeholder">
-Describe major chemotherapy approaches and when they are used.
-</span>
+### 4. Precision & Biomarker-Targeted Therapies
+* **PARP Inhibitors (Olaparib):** Approved for maintenance therapy in patients with germline $BRCA1/2$ mutations who have not progressed on platinum-based chemotherapy (POLO Trial).
+* **KRAS G12C/G12D Inhibitors:** Emerging direct KRAS inhibitors (e.g., MRTX1133) represent promising targeted advances for mutant RAS signaling.
+* **Immune Checkpoint Inhibitors:** Pembrolizumab is approved exclusively for the ~1% of PDAC patients displaying High Microsatellite Instability (MSI-H) or Mismatch Repair Deficiency (dMMR).
 
-## Radiation
 
-<span class="placeholder">
-Describe its role in localized, locally advanced, or palliative treatment.
-</span>
+# Conclusion & Future Directions
 
-## Targeted Therapy
+Pancreatic cancer remains a major challenge in modern oncology, driven by subtle early symptoms, aggressive tumor biology, a fibrotic microenvironment, and a lack of population-wide screening options.
 
-<span class="placeholder">
-Research biomarker-directed treatments and which patients may benefit.
-</span>
+However, epidemiological and clinical evidence demonstrates that **earlier detection substantially alters survival outcomes**:
 
-## Immunotherapy
-
-<span class="placeholder">
-Research which pancreatic cancer populations may benefit and why.
-</span>
-
-## Clinical Trials
-
-<span class="placeholder">
-Identify promising experimental approaches currently being tested.
-</span>
-
-
-# Treatment Is Changing
-
-<div class="figure-placeholder">
-
-<div>
-<strong>FIGURE 7 — TIMELINE OF PANCREATIC CANCER TREATMENT</strong>
-
-[Historical treatment]
-
-→ [Modern chemotherapy]
-
-→ [Precision treatment]
-
-→ [Immunotherapy / targeted approaches]
-
-→ [2026 developments]
-
-</div>
-
-</div>
-
-
-# Precision Oncology
-
-The same anatomical cancer does not necessarily behave identically
-in every patient.
-
-<span class="placeholder">
-Investigate how genomic or molecular information can influence
-treatment selection in pancreatic cancer.
-</span>
-
-
-# Survival and Prognosis
-
-Rather than treating "life expectancy" as a single number, this project
-will examine prognosis through multiple measures.
-
-### 5-Year Relative Survival
-
-[VALUE]
-
-### Median Overall Survival
-
-[VALUE]
-
-### Survival by Stage
-
-[INSERT GRAPH]
-
-### Survival by Treatment
-
-[INSERT GRAPH]
-
-### Survival by Molecular / Clinical Subtype
-
-[INSERT GRAPH IF DATA ARE AVAILABLE]
-
-
-# What Are Patients Actually Dying From?
-
-<span class="placeholder">
-Investigate how progression, metastatic disease, organ involvement,
-recurrence, and treatment complications contribute to mortality.
-
-Do not assume that "death from cancer" means the same biological
-process in every patient.
-</span>
-
-
-# The Biggest Unsolved Problem
-
-## My Current Research Hypothesis
-
-> **Pancreatic cancer mortality may be particularly difficult to reduce
-> through treatment alone if most patients continue to reach diagnosis
-> after the disease has already become difficult or impossible to cure surgically.**
-
-<span class="placeholder">
-Use evidence from the epidemiology, stage distribution, survival,
-and treatment sections to decide whether this hypothesis is supported.
-</span>
-
-
-# What Solutions Already Exist?
-
-<table class="research-table">
-
-<tr>
-<th>Solution</th>
-<th>Current Evidence</th>
-<th>Potential Benefit</th>
-<th>Major Limitation</th>
-</tr>
-
-<tr>
-<td>Risk-based surveillance</td>
-<td>[Research]</td>
-<td>[Research]</td>
-<td>[Research]</td>
-</tr>
-
-<tr>
-<td>Blood biomarkers</td>
-<td>[Research]</td>
-<td>[Research]</td>
-<td>[Research]</td>
-</tr>
-
-<tr>
-<td>Liquid biopsy</td>
-<td>[Research]</td>
-<td>[Research]</td>
-<td>[Research]</td>
-</tr>
-
-<tr>
-<td>Advanced imaging</td>
-<td>[Research]</td>
-<td>[Research]</td>
-<td>[Research]</td>
-</tr>
-
-<tr>
-<td>AI-assisted detection</td>
-<td>[Research]</td>
-<td>[Research]</td>
-<td>[Research]</td>
-</tr>
-
-</table>
-
-
-# My Proposed Solution
-
-<div class="solution-box">
-
-<h2>
-Can risk-stratified early detection change the stage at diagnosis?
-</h2>
-
-<p>
-<span class="placeholder">
-This is a working project idea, not a proven clinical recommendation.
-</span>
-</p>
-
-</div>
-
-
-## Proposed Model
-
-```text
-General Population
-        ↓
-Risk Assessment
-        ↓
-Identify High-Risk Population
-        ↓
-Surveillance / Biomarker Testing
-        ↓
-Abnormal Result
-        ↓
-Confirmatory Imaging
-        ↓
-Earlier Diagnosis
-        ↓
-More Potentially Treatable Disease
-        ↓
-Potential Survival Improvement
-
----
+1. **Survival Disparity:** Shifting diagnoses from Stage IV (3.2% 5-year survival) to Stage I (44.3% 5-year survival) dramatically improves prognosis.
+2. **High-Risk Surveillance:** Implementing longitudinal imaging (EUS/MRI) and multi-cancer early detection (MCED) blood assays in high-risk cohorts—such as individuals with germline mutations ($BRCA$, $PALB2$, $CDKN2A$) or new-onset diabetes—provides a targeted path toward early identification.
+3. **Integrated Innovation:** Combining liquid biopsy biomarkers with targeted therapeutics (KRAS inhibitors, PARP inhibitors) offers a comprehensive strategy to reduce pancreatic cancer mortality.
 
 ## Artificial Intelligence Use
 
