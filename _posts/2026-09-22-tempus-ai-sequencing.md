@@ -345,7 +345,7 @@ business model.
 
 ## Founder
 
-<img src="/pictures/tempus/eric-lefkofsky.jpg"
+<img src="/figures/eric tempus.webp"
      alt="Eric Lefkofsky, founder of Tempus"
      width="100%">
 
