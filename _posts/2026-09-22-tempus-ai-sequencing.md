@@ -385,15 +385,97 @@ round and stated that it had raised **$210 million to date**.
 
 # What Does Tempus Actually Do?
 
-Tempus operates at the intersection of several fields:
+<style>
+.tempus-pipeline {
+  margin: 40px 0;
+  padding: 30px;
+  background: #f9f9f8;
+  border: 1px solid #e2e2de;
+  border-radius: 12px;
+}
 
-```text
-       GENOMICS
-          +
-    CLINICAL DATA
-          +
-       AI / ML
-          +
-      HEALTHCARE
-          ↓
-   TEMPUS PLATFORM
+.tempus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.tempus-pillar {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.tempus-pillar h4 {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+  color: #111;
+}
+
+.tempus-pillar p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.tempus-arrow {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #888;
+  margin: 15px 0;
+}
+
+.tempus-output-box {
+  background: #111111;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.tempus-output-box h3 {
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.tempus-output-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .tempus-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="tempus-pipeline">
+  <div class="tempus-grid">
+    <div class="tempus-pillar">
+      <h4>Multimodal Genomics</h4>
+      <p>DNA/RNA sequencing assays (xT, xF, xG) tracking somatic & germline mutations</p>
+    </div>
+    <div class="tempus-pillar">
+      <h4>Clinical Informatics</h4>
+      <p>Unstructured EHR data, pathology slides, imaging, and treatment outcomes</p>
+    </div>
+    <div class="tempus-pillar">
+      <h4>AI / Machine Learning</h4>
+      <p>Algorithmic trial matching, generative workflow assistants (Tempus One)</p>
+    </div>
+  </div>
+
+  <div class="tempus-arrow">↓</div>
+
+  <div class="tempus-output-box">
+    <h3>The Tempus Precision Medicine Engine</h3>
+    <p>Structuring fragmented healthcare records into actionable insights for oncology, cardiology, and biopharma drug discovery.</p>
+  </div>
+</div>
