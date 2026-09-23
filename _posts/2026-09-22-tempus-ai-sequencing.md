@@ -343,15 +343,19 @@ business model.
 
 ---
 
+---
+
 ## Founder
 
-<img src="/figures/eric tempus.webp"
-     alt="Eric Lefkofsky, founder of Tempus"
-     width="100%">
-
-**Figure 1 — Eric Lefkofsky**
-
-**Source:** Tempus official media library.
+<div style="text-align: center; margin: 30px 0;">
+    <img src="/figures/eric tempus.webp"
+         alt="Eric Lefkofsky, founder of Tempus"
+         style="max-width: 350px; width: 100%; height: auto; border-radius: 8px; border: 1px solid #ddd;">
+    <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">
+        <strong>Figure 1 — Eric Lefkofsky</strong><br>
+        <span style="font-size: 0.75rem; color: #888;">Source:Eric Lefkofsky</span>
+    </p>
+</div>
 
 
 # When Was Tempus Founded?
