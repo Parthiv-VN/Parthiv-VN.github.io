@@ -159,6 +159,7 @@ tags: [Tempus AI, sequencing, genomics, precision medicine, healthcare informati
 
 .research-table th {
     font-weight: 700;
+    background: #f8f9fa;
 }
 
 .solution-box {
@@ -180,11 +181,6 @@ tags: [Tempus AI, sequencing, genomics, precision medicine, healthcare informati
     background: #f7f7f5;
     border: 1px solid #ddd;
     border-radius: 12px;
-}
-
-.placeholder {
-    color: #888;
-    font-style: italic;
 }
 
 @media (max-width: 800px) {
@@ -215,7 +211,7 @@ tags: [Tempus AI, sequencing, genomics, precision medicine, healthcare informati
 <section class="research-hero">
 
     <div class="research-kicker">
-        GENOMICS • HEALTHCARE INFORMATICS • BUSINESS - Work in Progress(WIP)
+        GENOMICS • HEALTHCARE INFORMATICS • BUSINESS
     </div>
 
     <h1>
@@ -297,7 +293,7 @@ Founder: Eric Lefkofsky
 </div>
 
 <div class="stat-card">
-<span class="stat-number">$1.272B</span>
+<span class="stat-number">$1.27B</span>
 <span class="stat-title">2025 Revenue</span>
 <span class="stat-source">
 Total net revenue
@@ -313,10 +309,10 @@ Quarter ended June 30, 2026
 </div>
 
 <div class="stat-card">
-<span class="stat-number">$1.595–1.605B</span>
+<span class="stat-number">$1.60B</span>
 <span class="stat-title">2026 Revenue Guidance</span>
 <span class="stat-source">
-Company guidance
+Updated annual target
 </span>
 </div>
 
@@ -329,7 +325,7 @@ Tempus was founded by **Eric Lefkofsky** in 2015.
 
 The company was originally established under the name **Bioin, LLC**
 in August 2015. It later became Tempus Health, Tempus Labs, and
-ultimately Tempus AI. [1]
+ultimately Tempus AI.
 
 Lefkofsky became interested in improving the use of data in cancer
 care following his wife's cancer diagnosis.
@@ -357,48 +353,34 @@ business model.
 
 **Source:** Tempus official media library.
 
-Use the official Tempus image only if its displayed reuse/download
-terms permit your educational website use.
-
 
 # When Was Tempus Founded?
 
 Tempus was established in **August 2015**.
 
 The company was originally named Bioin, LLC before changing its name
-during its development into the Tempus business. [1]
+during its development into the Tempus business.
 
 Tempus later completed its initial public offering in June 2024,
 with its Class A shares beginning to trade on Nasdaq under the symbol
-**TEM**. [3]
+**TEM**.
 
 The IPO itself was not the company's initial funding.
 
 By September 2017, Tempus had raised approximately **$130 million**
-in total funding. [4]
+in total funding.
 
 By March 2018, Tempus announced an additional $80 million financing
-round and stated that it had raised **$210 million to date**. [5]
+round and stated that it had raised **$210 million to date**.
 
-### Important distinction
+### Funding Summary
 
-The exact amount of the **original founding investment** is not
-clearly disclosed in the primary sources reviewed for this project.
-
-Therefore, this project does not present an unsupported number as
-Tempus' "initial investment."
-
-Instead:
-
-| Funding milestone | Amount |
+| Funding Milestone | Amount / Date |
 |---|---:|
-| Founded | 2015 |
-| Total funding reported by Sept. 2017 | ~$130 million |
-| Total funding after March 2018 round | $210 million |
-| 2024 IPO net proceeds | ~$382 million |
-
-The IPO proceeds are different from the private funding raised during
-the company's startup period.
+| Founded (Bioin, LLC) | August 2015 |
+| Total Funding Reported (Sept. 2017) | ~$130 million |
+| Total Funding Reported (March 2018) | $210 million |
+| Nasdaq IPO Net Proceeds (June 2024) | ~$382 million |
 
 
 # What Does Tempus Actually Do?
@@ -406,12 +388,12 @@ the company's startup period.
 Tempus operates at the intersection of several fields:
 
 ```text
-        GENOMICS
-            +
-      CLINICAL DATA
-            +
-        AI / ML
-            +
-     HEALTHCARE
-            ↓
-      TEMPUS PLATFORM
+       GENOMICS
+          +
+    CLINICAL DATA
+          +
+       AI / ML
+          +
+      HEALTHCARE
+          ↓
+   TEMPUS PLATFORM
