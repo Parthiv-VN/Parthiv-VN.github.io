@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hands-On Activity 03: Machine Learning & Classification of GTEx Integrin Expression"
+title: "Machine Learning & Classification of GTEx Integrin Expression"
 date: 2026-09-30
 categories: [Genomics, Machine Learning, Data Science, Bioinformatics]
 tags: [GTEx, integrins, scikit-learn, logistic regression, KNN, classification, Python, data science]
