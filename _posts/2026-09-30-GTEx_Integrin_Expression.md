@@ -245,7 +245,6 @@ Prior to training classification models, comparing full integrin transcript dist
 
 <div class="figure-card">
     <picture>
-        <source srcset="/notebooks/fig4_violin_lung_vs_liver.webp" type="image/webp">
         <img src="/notebooks/fig4_violin_lung_vs_liver.png" alt="Integrin Genes of the Lung vs. the Liver Split Violin Plot">
     </picture>
     <div class="figure-caption">
@@ -256,7 +255,6 @@ Prior to training classification models, comparing full integrin transcript dist
 
 <div class="figure-card">
     <picture>
-        <source srcset="/notebooks/fig5_top_discriminatory_genes.webp" type="image/webp">
         <img src="/notebooks/fig5_top_discriminatory_genes.png" alt="Top Discriminatory Integrin Subunits Bar Chart">
     </picture>
     <div class="figure-caption">
@@ -319,7 +317,6 @@ Prior to training classification models, comparing full integrin transcript dist
 
 <div class="figure-card">
     <picture>
-        <source srcset="/notebooks/fig1_roc_threshold_itga10.webp" type="image/webp">
         <img src="/notebooks/fig1_roc_threshold_itga10.png" alt="ITGA10 ROC and Threshold Optimization Curve">
     </picture>
     <div class="figure-caption">
@@ -330,7 +327,6 @@ Prior to training classification models, comparing full integrin transcript dist
 
 <div class="figure-card">
     <picture>
-        <source srcset="/notebooks/fig2_knn_decision_boundary.webp" type="image/webp">
         <img src="/notebooks/fig2_knn_decision_boundary.png" alt="2D KNN Decision Surface">
     </picture>
     <div class="figure-caption">
@@ -341,7 +337,6 @@ Prior to training classification models, comparing full integrin transcript dist
 
 <div class="figure-card">
     <picture>
-        <source srcset="/notebooks/fig3_multiclass_confusion_matrix.webp" type="image/webp">
         <img src="/notebooks/fig3_multiclass_confusion_matrix.png" alt="7-Organ Multiclass Confusion Matrix">
     </picture>
     <div class="figure-caption">
