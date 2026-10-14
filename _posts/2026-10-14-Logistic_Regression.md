@@ -245,7 +245,7 @@ Using GTEx RNA-Seq data across **Lung** (n=288) and **Breast** (n=179) cohorts, 
 
 <div class="figure-card">
     <picture>
-        <source srcset="/notebooks/fig1_violin_lung_vs_breast.webp" type="image/webp">
+        <source srcset="/notebooks/fig1_violin_lung_vs_breast.png" type="image/webp">
         <img src="/notebooks/fig1_violin_lung_vs_breast.png" alt="Integrin Genes Split Violin Plot: Lung vs Breast">
     </picture>
     <div class="figure-caption">
@@ -258,7 +258,7 @@ Using GTEx RNA-Seq data across **Lung** (n=288) and **Breast** (n=179) cohorts, 
     <strong>Visual Findings:</strong>
     <ul>
         <li><strong>Strong Predictor — <code>ITGAX</code> (\alpha_X / CD11c):</strong> Displays complete bimodal separation between tissues. Expression in Lung tissue reaches a high median (\sim 6.76), whereas Breast tissue exhibits near-complete suppression (\sim 2.52). This is biologically driven by the dense resident alveolar macrophage population in pulmonary tissue.</li>
-        <li><strong>Weak Predictor — <code>ITGA6</code> (\alpha_6):</strong> Displays near-identical expression distributions between Lung ({Mean} \approx 4.96$) and Breast ({Mean} \approx 4.73$), indicating virtually zero univariate diagnostic signal for distinguishing these two tissue types.</li>
+        <li><strong>Weak Predictor — <code>ITGA6</code> (\alpha_6):</strong> Displays near-identical expression distributions between Lung ({Mean} \approx 4.96$) and Breast ({Mean} \approx 4.73), indicating virtually zero univariate diagnostic signal for distinguishing these two tissue types.</li>
     </ul>
 </div>
 
@@ -270,7 +270,7 @@ To test our visual hypothesis, we trained a binary logistic regression model on 
 
 <div class="figure-card">
     <picture>
-        <source srcset="/notebooks/fig2_strong_predictor_itgax.webp" type="image/webp">
+        <source srcset="/notebooks/fig2_strong_predictor_itgax.png" type="image/webp">
         <img src="/notebooks/fig2_strong_predictor_itgax.png" alt="ITGAX Confusion Matrix and ROC Curve">
     </picture>
     <div class="figure-caption">
@@ -291,7 +291,7 @@ Next, we evaluated model performance when trained strictly on `ITGA6`, which dis
 
 <div class="figure-card">
     <picture>
-        <source srcset="/notebooks/fig3_weak_predictor_itga6.webp" type="image/webp">
+        <source srcset="/notebooks/fig3_weak_predictor_itga6.png" type="image/webp">
         <img src="/notebooks/fig3_weak_predictor_itga6.png" alt="ITGA6 Confusion Matrix and ROC Curve">
     </picture>
     <div class="figure-caption">
@@ -365,7 +365,7 @@ We expanded the scope from binary classification to a multi-class multinomial lo
 
 <div class="figure-card">
     <picture>
-        <source srcset="/notebooks/fig4_multiclass_7_organs.webp" type="image/webp">
+        <source srcset="/notebooks/fig4_multiclass_7_organs.png" type="image/webp">
         <img src="/notebooks/fig4_multiclass_7_organs.png" alt="7-Organ Multiclass Confusion Matrix Heatmap">
     </picture>
     <div class="figure-caption">
