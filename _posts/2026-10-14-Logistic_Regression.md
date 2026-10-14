@@ -1,3 +1,6 @@
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
 ---
 layout: post
 title: "Split Violin Plot Analysis & Machine Learning Classification: Lung vs. Breast Integrin Profiles"
