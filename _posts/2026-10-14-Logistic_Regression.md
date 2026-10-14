@@ -242,7 +242,7 @@ tags: [GTEx, integrins, RNA-seq, logistic regression, ROC curve, confusion matri
 
 # Part 1 — Visual Exploration
 
-Integrins are heterodimeric cell-surface receptors composed of non-covalently linked \alpha and \beta subunits. They mediate cell-matrix adhesion, structural tissue integrity, and leukocyte trafficking.
+Integrins are heterodimeric cell-surface receptors composed of non-covalently linked &alpha; and &beta; subunits. They mediate cell-matrix adhesion, structural tissue integrity, and leukocyte trafficking.
 
 Using GTEx RNA-Seq data across **Lung** (n=288) and **Breast** (n=179) cohorts, we first construct a whole-superfamily split violin plot to visually identify highly discriminatory versus overlapping transcript profiles.
 
@@ -260,16 +260,16 @@ Using GTEx RNA-Seq data across **Lung** (n=288) and **Breast** (n=179) cohorts, 
 <div class="research-callout">
     <strong>Visual Findings:</strong>
     <ul>
-        <li><strong>Strong Predictor — <code>ITGAX</code> (\alpha_X / CD11c):</strong> Displays complete bimodal separation between tissues. Expression in Lung tissue reaches a high median (\sim 6.76), whereas Breast tissue exhibits near-complete suppression (\sim 2.52). This is biologically driven by the dense resident alveolar macrophage population in pulmonary tissue.</li>
-        <li><strong>Weak Predictor — <code>ITGA6</code> (\alpha_6):</strong> Displays near-identical expression distributions between Lung ({Mean} \approx 4.96$) and Breast ({Mean} \approx 4.73), indicating virtually zero univariate diagnostic signal for distinguishing these two tissue types.</li>
+        <li><strong>Strong Predictor — <code>ITGAX</code> (&alpha;<sub>X</sub> / CD11c):</strong> Displays complete bimodal separation between tissues. Expression in Lung tissue reaches a high median (~6.76), whereas Breast tissue exhibits near-complete suppression (~2.52). This is biologically driven by the dense resident alveolar macrophage population in pulmonary tissue.</li>
+        <li><strong>Weak Predictor — <code>ITGA6</code> (&alpha;<sub>6</sub>):</strong> Displays near-identical expression distributions between Lung (Mean &approx; 4.96) and Breast (Mean &approx; 4.73), indicating virtually zero univariate diagnostic signal for distinguishing these two tissue types.</li>
     </ul>
 </div>
 
 ---
 
-# Part 2 — Logistic Regression with a Strong Predictor (`ITGAX`)
+# Part 2 — Logistic Regression with a Strong Predictor (<code>ITGAX</code>)
 
-To test our visual hypothesis, we trained a binary logistic regression model on a $70/30$ train-test split ($n_{\text{train}} = 326$, $n_{\text{test}} = 141$) using `ITGAX` as a single input feature.
+To test our visual hypothesis, we trained a binary logistic regression model on a 70/30 train-test split (n<sub>train</sub> = 326, n<sub>test</sub> = 141) using <code>ITGAX</code> as a single input feature.
 
 <div class="figure-card">
     <picture>
@@ -288,9 +288,9 @@ To test our visual hypothesis, we trained a binary logistic regression model on 
 
 ---
 
-# Part 3 — Logistic Regression with a Weak Predictor (`ITGA6`)
+# Part 3 — Logistic Regression with a Weak Predictor (<code>ITGA6</code>)
 
-Next, we evaluated model performance when trained strictly on `ITGA6`, which displayed overlapping violin distributions.
+Next, we evaluated model performance when trained strictly on <code>ITGA6</code>, which displayed overlapping violin distributions.
 
 <div class="figure-card">
     <picture>
@@ -303,7 +303,7 @@ Next, we evaluated model performance when trained strictly on `ITGA6`, which dis
     </div>
 </div>
 
-* **Test Accuracy:** **62.4%** ($88/141$ correct predictions)
+* **Test Accuracy:** **62.4%** (88/141 correct predictions)
 * **AUC Score:** **0.58**
 * **Interpretation:** The model fails to discriminate effectively. Because the expression distributions overlap substantially, the classifier defaults to predicting the majority class (Lung), resulting in high false-positive rates for Breast samples.
 
@@ -311,7 +311,7 @@ Next, we evaluated model performance when trained strictly on `ITGA6`, which dis
 
 # Part 4 — Model Stability Analysis
 
-To verify model reliability and ensure our findings were not artifacts of a fortunate data split, we re-ran the `ITGAX` binary classification pipeline under a different random split seed (`random_state=101`).
+To verify model reliability and ensure our findings were not artifacts of a fortunate data split, we re-ran the <code>ITGAX</code> binary classification pipeline under a different random split seed (<code>random_state=101</code>).
 
 <div class="table-container">
 <table class="research-table">
@@ -328,13 +328,13 @@ To verify model reliability and ensure our findings were not artifacts of a fort
   <td><strong>Training Samples</strong></td>
   <td>326</td>
   <td>326</td>
-  <td>Identical ($70\%$)</td>
+  <td>Identical (70%)</td>
 </tr>
 <tr>
   <td><strong>Testing Samples</strong></td>
   <td>141</td>
   <td>141</td>
-  <td>Identical ($30\%$)</td>
+  <td>Identical (30%)</td>
 </tr>
 <tr>
   <td><strong>Accuracy Score</strong></td>
@@ -358,13 +358,13 @@ To verify model reliability and ensure our findings were not artifacts of a fort
 </table>
 </div>
 
-* **Discussion:** When a biological feature possesses strong separation signal (e.g., `ITGAX`), performance remains stable regardless of random sampling splits. Weak or noisy features, by contrast, exhibit high sensitivity to data partitioning.
+* **Discussion:** When a biological feature possesses strong separation signal (e.g., <code>ITGAX</code>), performance remains stable regardless of random sampling splits. Weak or noisy features, by contrast, exhibit high sensitivity to data partitioning.
 
 ---
 
 # Part 5 — Multi-Class Logistic Regression (All 7 Organs)
 
-We expanded the scope from binary classification to a multi-class multinomial logistic regression model across all seven GTEx primary tissues (N = 1,987 total samples; $n_{\text{test}} = 398$). We selected two distinct integrin markers: `ITGAX` (pulmonary/immune marker) and `ITGA7` (muscle/myoepithelial marker).
+We expanded the scope from binary classification to a multi-class multinomial logistic regression model across all seven GTEx primary tissues (N = 1,987 total samples; n<sub>test</sub> = 398). We selected two distinct integrin markers: <code>ITGAX</code> (pulmonary/immune marker) and <code>ITGA7</code> (muscle/myoepithelial marker).
 
 <div class="figure-card">
     <picture>
