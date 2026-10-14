@@ -211,7 +211,7 @@ You are not merely the sum of your sequence; you are the product of how your gen
 To answer whether you are defined by your genome, we must distinguish between two core biological layers:
 
 1. **The Genotype (The Hardcoded Sequence):** The linear arrangement of Adenine (A), Thymine (T), Cytosine (C), and Guanine (G) nucleotides inherited from your biological parents.
-2. **The Epigenome (The Regulatory Software):** Molecular modifications—such as DNA methylation ($5mC$), histone tail acetylation/methylation, and non-coding RNA interference—that determine whether a gene is active, silenced, or dialed up like a volume knob.
+2. **The Epigenome (The Regulatory Software):** Molecular modifications—such as DNA methylation (5mC), histone tail acetylation/methylation, and non-coding RNA interference—that determine whether a gene is active, silenced, or dialed up like a volume knob.
 
 <div style="max-width: 600px; margin: 2rem auto; font-family: inherit;">
   <div style="background: #f8f9fa; border-left: 4px solid #4a90e2; padding: 12px 16px; margin-bottom: 8px; border-radius: 4px;">
