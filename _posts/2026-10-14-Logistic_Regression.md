@@ -5,10 +5,6 @@ date: 2026-10-14
 categories: [Genomics, Machine Learning, Bioinformatics, Data Science]
 tags: [GTEx, integrins, RNA-seq, logistic regression, ROC curve, confusion matrix, scikit-learn]
 ---
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-
 <style>
 /* =====================================================
    HERO & HEADER STYLES
