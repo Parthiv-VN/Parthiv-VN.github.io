@@ -101,23 +101,35 @@ tags: [pancreatic cancer, TCGA-PAAD, somatic mutations, genomics, bioinformatics
     background: #f3f3f0;
 }
 
-.research-figure {
+/* =====================================================
+    FIGURE CARDS
+===================================================== */
+.figure-card {
+    border: 1px solid #e2e2de;
+    border-radius: 12px;
+    padding: 20px;
+    background: #ffffff;
     margin: 40px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
-.research-figure img {
+.figure-card picture,
+.figure-card img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
-    border-radius: 10px;
-    border: 1px solid #e5e5e5;
+    border-radius: 8px;
 }
 
-.research-figure figcaption {
+.figure-caption {
+    margin-top: 15px;
     font-size: 0.88rem;
-    color: #777;
-    line-height: 1.5;
-    margin-top: 12px;
+    color: #555;
+    line-height: 1.45;
+}
+
+.figure-caption strong {
+    color: #111;
 }
 
 .research-table {
@@ -390,24 +402,20 @@ a distribution of unique patients.
 
 # 3. Figure One — The Most Frequently Mutated Genes
 
-<figure class="research-figure">
-
-    <img
-        src="../figures/fig1_top_mutated_genes.png"
-        alt="Horizontal bar chart showing the 25 most frequently mutated genes in the TCGA-PAAD dataset"
-        loading="lazy"
-    >
-
-    <figcaption>
+<div class="figure-card">
+    <picture>
+        <source srcset="../figures/fig1_top_mutated_genes.png" type="image/png">
+        <img src="../figures/fig1_top_mutated_genes.png" alt="Horizontal bar chart showing the 25 most frequently mutated genes in the TCGA-PAAD dataset" loading="lazy">
+    </picture>
+    <div class="figure-caption">
         <strong>Figure 1.</strong>
         Top 25 most frequently mutated genes in the analyzed
         TCGA-PAAD somatic mutation dataset. The horizontal axis
         represents the number of unique tumor samples with a
         mutation recorded in each gene, when sample identifiers
         are available.
-    </figcaption>
-
-</figure>
+    </div>
+</div>
 
 ## What does this figure show?
 
@@ -457,22 +465,18 @@ and supporting experimental or clinical research.
 
 # 4. Figure Two — Distribution of Mutation Effects
 
-<figure class="research-figure">
-
-    <img
-        src="../figures/fig2_mutation_effects.png"
-        alt="Bar chart showing the distribution of somatic mutation variant classifications in TCGA-PAAD"
-        loading="lazy"
-    >
-
-    <figcaption>
+<div class="figure-card">
+    <picture>
+        <source srcset="../figures/fig2_mutation_effects.png" type="image/png">
+        <img src="../figures/fig2_mutation_effects.png" alt="Bar chart showing the distribution of somatic mutation variant classifications in TCGA-PAAD" loading="lazy">
+    </picture>
+    <div class="figure-caption">
         <strong>Figure 2.</strong>
         Distribution of the ten most frequently recorded
         variant classifications or mutation effects in the
         analyzed TCGA-PAAD dataset.
-    </figcaption>
-
-</figure>
+    </div>
+</div>
 
 ## What are mutation classifications?
 
@@ -531,22 +535,18 @@ the bars should not be interpreted as percentages of patients.
 
 # 5. Figure Three — Mutation Frequency Rank Curve
 
-<figure class="research-figure">
-
-    <img
-        src="../figures/fig3_frequency_rank_curve.png"
-        alt="Line graph showing mutation counts across the 25 highest-ranked genes"
-        loading="lazy"
-    >
-
-    <figcaption>
+<div class="figure-card">
+    <picture>
+        <source srcset="../figures/fig3_frequency_rank_curve.png" type="image/png">
+        <img src="../figures/fig3_frequency_rank_curve.png" alt="Line graph showing mutation counts across the 25 highest-ranked genes" loading="lazy">
+    </picture>
+    <div class="figure-caption">
         <strong>Figure 3.</strong>
         Mutation-frequency rank curve for the 25 most frequently
         mutated genes. Genes are ordered from highest to lowest
         frequency.
-    </figcaption>
-
-</figure>
+    </div>
+</div>
 
 ## What is a rank curve?
 
@@ -595,22 +595,18 @@ the same gene-frequency data.
 
 # 6. Figure Four — Distribution Among the Top Five Genes
 
-<figure class="research-figure">
-
-    <img
-        src="../figures/fig4_top_genes_donut.png"
-        alt="Donut chart showing the relative mutation counts of the five most frequently mutated genes"
-        loading="lazy"
-    >
-
-    <figcaption>
+<div class="figure-card">
+    <picture>
+        <source srcset="../figures/fig4_top_genes_donut.png" type="image/png">
+        <img src="../figures/fig4_top_genes_donut.png" alt="Donut chart showing the relative mutation counts of the five most frequently mutated genes" loading="lazy">
+    </picture>
+    <div class="figure-caption">
         <strong>Figure 4.</strong>
         Relative share of the mutation-frequency counts among
         the five most frequently mutated genes in the analyzed
         dataset. The legend identifies each gene and its count.
-    </figcaption>
-
-</figure>
+    </div>
+</div>
 
 ## What does this donut chart represent?
 
