@@ -404,8 +404,8 @@ a distribution of unique patients.
 
 <div class="figure-card">
     <picture>
-        <source srcset="../figures/fig1_top_mutated_genes.png" type="image/png">
-        <img src="../figures/fig1_top_mutated_genes.png" alt="Horizontal bar chart showing the 25 most frequently mutated genes in the TCGA-PAAD dataset" loading="lazy">
+        <source srcset="/figures/fig1_top_mutated_genes.png" type="image/png">
+        <img src="/figures/fig1_top_mutated_genes.png" alt="Horizontal bar chart showing the 25 most frequently mutated genes in the TCGA-PAAD dataset" loading="lazy">
     </picture>
     <div class="figure-caption">
         <strong>Figure 1.</strong>
@@ -467,8 +467,8 @@ and supporting experimental or clinical research.
 
 <div class="figure-card">
     <picture>
-        <source srcset="../figures/fig2_mutation_effects.png" type="image/png">
-        <img src="../figures/fig2_mutation_effects.png" alt="Bar chart showing the distribution of somatic mutation variant classifications in TCGA-PAAD" loading="lazy">
+        <source srcset="/figures/fig2_mutation_effects.png" type="image/png">
+        <img src="/figures/fig2_mutation_effects.png" alt="Bar chart showing the distribution of somatic mutation variant classifications in TCGA-PAAD" loading="lazy">
     </picture>
     <div class="figure-caption">
         <strong>Figure 2.</strong>
@@ -537,8 +537,8 @@ the bars should not be interpreted as percentages of patients.
 
 <div class="figure-card">
     <picture>
-        <source srcset="../figures/fig3_frequency_rank_curve.png" type="image/png">
-        <img src="../figures/fig3_frequency_rank_curve.png" alt="Line graph showing mutation counts across the 25 highest-ranked genes" loading="lazy">
+        <source srcset="/figures/fig3_frequency_rank_curve.png" type="image/png">
+        <img src="/figures/fig3_frequency_rank_curve.png" alt="Line graph showing mutation counts across the 25 highest-ranked genes" loading="lazy">
     </picture>
     <div class="figure-caption">
         <strong>Figure 3.</strong>
@@ -597,8 +597,8 @@ the same gene-frequency data.
 
 <div class="figure-card">
     <picture>
-        <source srcset="../figures/fig4_top_genes_donut.png" type="image/png">
-        <img src="../figures/fig4_top_genes_donut.png" alt="Donut chart showing the relative mutation counts of the five most frequently mutated genes" loading="lazy">
+        <source srcset="/figures/fig4_top_genes_donut.png" type="image/png">
+        <img src="/figures/fig4_top_genes_donut.png" alt="Donut chart showing the relative mutation counts of the five most frequently mutated genes" loading="lazy">
     </picture>
     <div class="figure-caption">
         <strong>Figure 4.</strong>
